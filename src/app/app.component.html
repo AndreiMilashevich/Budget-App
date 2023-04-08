@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <img src="../assets/images/travel time-logos_black_short.png" alt="logo" width="60" height="60">
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <img src="../assets/images/flags/PL-flag-32.png" alt="">
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <span>English</span>
+    </button>
+    <button mat-menu-item>
+      <span>Polish</span>
+    </button>
+    <button mat-menu-item>
+      <span>Russian</span>
+    </button>
+    <button mat-menu-item>
+      <span>Belarussian</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+<app-login-page></app-login-page>
