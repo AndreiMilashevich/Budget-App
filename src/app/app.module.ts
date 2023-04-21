@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgxTranslateModule } from './translate/translate.module';
+import { TogglePasswordDirective } from './shared/directives/toggle-password.directive';
 
 
 const importedModules = [
@@ -30,6 +31,7 @@ const importedModules = [
 	declarations: [
 		AppComponent,
 		LoginPageComponent,
+		TogglePasswordDirective,
 	],
 	imports: [
 		...importedModules,
