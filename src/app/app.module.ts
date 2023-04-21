@@ -15,6 +15,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import { TogglePasswordDirective } from './shared/directives/toggle-password.directive';
 
 
 const importedModules = [
@@ -32,6 +33,7 @@ const importedModules = [
 		AppComponent,
 		LoginPageComponent,
 		HeaderComponent,
+		TogglePasswordDirective,
 	],
 	imports: [
 		...importedModules,
