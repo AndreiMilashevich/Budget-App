@@ -1,4 +1,4 @@
-import { Directive, DoCheck, ElementRef, HostBinding } from '@angular/core';
+import { Directive, DoCheck, HostBinding } from '@angular/core';
 
 @Directive({
 	selector: '[appTogglePassword]',
@@ -7,8 +7,6 @@ import { Directive, DoCheck, ElementRef, HostBinding } from '@angular/core';
 export class TogglePasswordDirective implements DoCheck {
 	@HostBinding('type') public passwordType: string = 'password';
 	private isPassword: boolean = true;
-
-	constructor(private readonly el: ElementRef) {}
 
 	public ngDoCheck(): void {
 		this.passwordType = this.isPassword ? 'password' : 'text';

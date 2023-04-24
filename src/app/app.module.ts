@@ -15,7 +15,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { TogglePasswordDirective } from './shared/directives/toggle-password.directive';
+import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
+import { SharedModule } from './shared/shared.module';
 
 
 const importedModules = [
@@ -28,18 +29,24 @@ const importedModules = [
 	MatToolbarModule,
 	NgxTranslateModule,
 ];
+
+const components = [
+	AppComponent,
+	LoginPageComponent,
+	RegistrationPageComponent,
+	HeaderComponent,
+];
+
 @NgModule({
 	declarations: [
-		AppComponent,
-		LoginPageComponent,
-		HeaderComponent,
-		TogglePasswordDirective,
+		...components
 	],
 	imports: [
 		...importedModules,
 		BrowserModule,
 		BrowserAnimationsModule,
 		AppRoutingModule,
+		SharedModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
