@@ -1,4 +1,11 @@
 {
 	"Login": "Login",
-	"EnterYourPassword": "Enter your password"
+	"EnterYourPassword": "Enter your password",
+	"Language": {
+		"Belarussian": "Belarussian",
+		"English": "English",
+		"Łacinka": "Łacinka",
+		"Polish": "Polish",
+		"Russian": "Russian"
+	}
 }
