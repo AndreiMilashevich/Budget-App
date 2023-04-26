@@ -2,18 +2,18 @@
 	<mat-card>
 		<mat-card-content>
 			<form onsubmit="return false;">
-				<mat-form-field class="example-full-width">
-					<mat-label>{{"Login" | translate }}</mat-label>
-					<input matInput value="" />
-				</mat-form-field>
-				<mat-form-field appearance="fill">
-					<mat-label>{{ "EnterYourPassword" | translate }}</mat-label>
-					<input matInput appTogglePassword #toggle="togglePassword" />
-					<button mat-icon-button matSuffix (click)="hide = !hide" (click)="toggle.togglePassword()"
-						[attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-						<mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
-					</button>
-				</mat-form-field>
+				<!-- <div class="float-container">
+					<input value="" />
+					<label>{{ "Login" | translate }}</label>
+				</div> -->
+				<app-form-field [label]="'Login' | translate" [type]="'text'"></app-form-field>
+				<app-form-field [label]="'Password' | translate" [type]="'password'"></app-form-field>
+				<!-- <label>{{ "EnterYourPassword" | translate }}</label>
+				<input appTogglePassword #toggle="togglePassword" />
+				<button mat-icon-button matSuffix (click)="hide = !hide" (click)="toggle.togglePassword()"
+					[attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+					<mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+				</button> -->
 				<button mat-raised-button color="primary">Accent</button>
 			</form>
 		</mat-card-content>

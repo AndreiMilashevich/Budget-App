@@ -1,8 +1,13 @@
 import { PercentPipe } from './percent.pipe';
 
 describe('PercentPipe', () => {
-  it('create an instance', () => {
-    const pipe = new PercentPipe();
-    expect(pipe).toBeTruthy();
-  });
+	const pipe = new PercentPipe();
+
+	it('create an instance', () => {
+		expect(pipe).toBeTruthy();
+	});
+
+	it('add % to value', () => {
+		expect(pipe.transform('10')).toBe('10 %');
+	});
 });

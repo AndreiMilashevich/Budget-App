@@ -1,10 +1,11 @@
 <mat-toolbar>
-  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-		<span>{{'Language.' + selectedLanguage | translate}}</span>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item *ngFor="let item of dropdownConfig; let i = index; trackBy: trackByFn" (click)="clickHandler(i)">
-      <span>{{'Language.' + item.title | translate}}</span>
-    </button>
-  </mat-menu>
+	<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+		<span>{{ "Language." + selectedLanguage | translate }}</span>
+	</button>
+	<mat-menu #menu="matMenu">
+		<button mat-menu-item *ngFor="let item of dropdownConfig; let i = index; trackBy: trackByFn"
+			(click)="clickHandler(i)">
+			<span>{{ "Language." + item.title | translate }}</span>
+		</button>
+	</mat-menu>
 </mat-toolbar>
