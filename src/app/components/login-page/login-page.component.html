@@ -7,7 +7,7 @@
 					<label>{{ "Login" | translate }}</label>
 				</div> -->
 				<app-form-field [label]="'Login' | translate" [type]="'text'"></app-form-field>
-				<app-form-field [label]="'Password' | translate" [type]="'password'"></app-form-field>
+				<app-form-field [label]="'Password' | translate" [type]="'password'" [isPasswordField]="true"></app-form-field>
 				<!-- <label>{{ "EnterYourPassword" | translate }}</label>
 				<input appTogglePassword #toggle="togglePassword" />
 				<button mat-icon-button matSuffix (click)="hide = !hide" (click)="toggle.togglePassword()"

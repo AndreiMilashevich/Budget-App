@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
 	selector: 'app-form-field',
@@ -8,4 +8,25 @@ import { Component, Input } from '@angular/core';
 export class FormFieldComponent {
 	@Input() public label!: string;
 	@Input() public type: string = 'text';
+	@Input() public isPasswordField: boolean = false;
+
+	@ViewChild('input') private readonly input!: ElementRef;
+
+	public value = '';
+
+	public isHidden: boolean = true;
+
+	public buttonClickHandler(): void {
+		this.iconSwitcher();
+		this.typeSwitcher();
+	}
+
+	private iconSwitcher(): void {
+		this.isHidden = !this.isHidden;
+	}
+
+	private typeSwitcher(): void {
+		this.type = this.isHidden ? 'password' : 'text';
+	}
+
 }
