@@ -6,9 +6,11 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 	styleUrls: ['./form-field.component.scss']
 })
 export class FormFieldComponent {
-	@Input() public label!: string;
+	@Input() public label: string = '';
 	@Input() public type: string = 'text';
 	@Input() public isPasswordField: boolean = false;
+	@Input() public isValidationPassed: boolean = true;
+	@Input() public validationMessage: string = '';
 
 	@ViewChild('input') private readonly input!: ElementRef;
 
@@ -19,6 +21,7 @@ export class FormFieldComponent {
 	public buttonClickHandler(): void {
 		this.iconSwitcher();
 		this.typeSwitcher();
+		this.inputFocusSetter();
 	}
 
 	private iconSwitcher(): void {
@@ -29,4 +32,7 @@ export class FormFieldComponent {
 		this.type = this.isHidden ? 'password' : 'text';
 	}
 
+	private inputFocusSetter(): void {
+		this.input.nativeElement.focus();
+	}
 }

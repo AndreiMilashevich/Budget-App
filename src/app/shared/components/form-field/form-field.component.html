@@ -1,5 +1,9 @@
-<div class="float-container">
-	<input value="" [type]="type" #input [(ngModel)]="value"/>
-	<label [ngClass]="{'filled': value}">{{ label }}</label>
-	<button mat-icon-button matSuffix *ngIf="isPasswordField" (click)="buttonClickHandler()"><mat-icon>{{ isHidden ? "visibility_off" : "visibility" }}</mat-icon></button>
+<div class="component-wrapper">
+	<div class="float-container">
+		<input value="" [type]="type" #input [(ngModel)]="value" />
+		<label [ngClass]="{'filled': value}">{{ label }}</label>
+		<button class="button" mat-icon-button matSuffix *ngIf="isPasswordField" (click)="buttonClickHandler()"><mat-icon>{{ isHidden ?
+				"visibility_off" : "visibility" }}</mat-icon></button>
+	</div>
+	<div class="validation-message" *ngIf="value">{{ validationMessage }}</div>
 </div>
